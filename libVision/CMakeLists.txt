@@ -1,0 +1,5 @@
+add_subdirectory(Armor)
+add_subdirectory(Rune)
+add_subdirectory(Bino)
+set(VISION_INCLUDE ${WMJ_VISION_ARMOR_INCLUDE} ${WMJ_VISION_RUNE_INCLUDE}  ${WMJ_VISION_BINO_INCLUDE} PARENT_SCOPE)
+set(VISION_LIB ArmorDetector ArmorTrigger AngleSolver Binocular)

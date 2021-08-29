@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# usage: 重新启动Main程序
+programme="Main"
+
+pid_num=$(ps -aux | grep $programme | grep -v grep | grep -i root | awk -F' ' '{print $2}')
+
+sudo kill $pid_num

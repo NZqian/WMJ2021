@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# usage: 检查循环重启程序
+
+cur_pwd=$(pwd)
+programme="Main"
+#programme="Recorder"
+
+while true
+do 
+    ps -aux | grep -i $programme | grep -v grep
+
+    if [[ "$?" -eq 0 ]]
+    then
+        echo "程序存在"
+    else
+        echo "程序不存在"
+        cd $cur_pwd/../build
+        ./$programme
+    fi
+    sleep 1
+done
+

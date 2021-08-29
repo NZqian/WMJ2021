@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# usage: 查看开机脚本状态
+watch -n 0.1 -d "sudo systemctl status rc.local.service"

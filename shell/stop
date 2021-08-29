@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# usage: 停止开机脚本
+sudo systemctl stop rc.local.service

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# 将指定代码仓库的参数文件全部拷到当前仓库下
+
+if [[ $# -lt 1 ]]
+then
+  echo -e "\033[31m[Error] Need target repo path\033[0m"
+  echo "For example:"
+  echo "./cpparam ~/WMJ2021"
+  exit
+fi
+
+target_path=$1
+if [[ ${target_path:0-1} == "/" ]]
+then
+  target_path=${target_path:0:0-1}
+fi
+cur_path=`pwd`
+if [[ ${cur_path:0-5} == "build" ]]
+then
+  cur_path=${cur_path%/*}
+fi
+# echo ${target_path}
+# echo ${cur_path}
+
+found=`find ${target_path} -name "*.yaml" -type f`
+# echo $found
+if [[ $? == 1 ]]
+then
+  echo -e "\033[31m[Error] Find target param file failed\033[0m"
+  exit 0
+fi
+
+files=(${found})
+echo "Found param files: "
+for file in ${files[*]}
+do
+  cur_file=${cur_path}${file:${#target_path}}
+  cur_file_path=${cur_file%/*}
+  echo "${file} -> ${cur_file_path}"
+  # mkdir -p $cur_file_path
+  cp $file $cur_file_path
+done
+
+echo -e "\033[33mClone param succeed\033[0m"
