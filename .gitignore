@@ -1,8 +1,6 @@
 build
 *.mp4
-*.png
 *.avi
-*.jpg
 *.yaml
 .vscode
 *.swp
