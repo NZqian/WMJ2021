@@ -1,0 +1,61 @@
+%YAML:1.0
+---
+
+########################
+# Aimer 通用参数
+########################
+
+aimer:
+    write_file: false
+    debug: true
+
+    min_vec_size: 20                # 最小建模帧数
+    delay: 0.0                      # 控制延迟
+    radius: 0.250                   # 装甲板到中心距离估计值
+    bullet_speed: 13.5              # m/s
+
+########################
+
+angle:
+    use_fluent_angle: true          # 是否使用平滑角度（在角度测量环境好的时候位姿更平滑，否则误差变大）
+    time_off: 0.02                  # 预测击打时间偏移量，和控制延时有关。步兵大约 0.02 秒，可以微调
+    abs_angle_off: 0                # 目标角度绝对偏移量，角度制
+    angle_shoot_off: 0              # 击发窗口相对偏移，角度制，正方向为当前旋转方向
+
+    time_switch: 0.0                # 甩头时间
+    angle_diff_shift: 45            # 切换阈值，角度制
+    angle_diff_static: 0.5          # 静止阈值，角度制
+    angle_predict_max: 35           # 最大预测角度，角度制
+    angle_follow_shoot_max: 25      # 跟随模式最大击发窗口角度，角度制
+    angle_focus_shoot_max: 2.5      # 专注模式最大击发窗口角度，角度制
+    palstance_min: 0.2              # 陀螺最低角速度，单位为 PI·rad/s
+    palstance_diff_ratio_max: 0.2   # 角速度波动幅度阈值
+    center_diff_ratio_max: 0.05     # 中心漂移和距离比例阈值
+    infantry_radius_min: 0.15       # 步兵最小半径
+    infantry_radius_max: 0.3        # 步兵最大半径
+    heor_radius_min: 0.2            # 英雄最小半径
+    hero_radius_max: 0.4            # 英雄最大半径
+
+########################
+
+static:
+    horizontal_diff_max: 50         # 切换阈值，绝对坐标水平距离
+    horizontal_diff_min: 0.1        # 静止阈值，绝对坐标水平距离
+    angle_predict: 30
+
+
+########################
+# Ransac 参数
+########################
+
+ransac:
+    debug: true
+
+    iteration_max: 100              # 最大迭代次数
+    model_confidence: 0.995         # 置信度
+
+    radius_min: 0.1                 # 最小半径
+    radius_max: 0.4                 # 最大半径
+    inlier_dist_ratio: 0.15         # 内点与圆的距离和半径的比值
+    inlier_dist_min: 0.01           # 内点距离阈值下限
+    inlier_dist_max: 0.05           # 内点距离阈值上限

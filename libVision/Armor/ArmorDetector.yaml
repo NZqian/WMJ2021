@@ -1,0 +1,106 @@
+%YAML:1.0
+---
+ArmorDetector:
+
+    state: 2
+        # Debug = 0,
+        # Single = 1,
+        # Double = 2,
+        # DoubleDebug = 3 ,
+        # SentryAttack = 4,
+        # SentryUse = 5
+    enemy_color: 1
+    #0是红色，1是蓝色
+
+    singleChoose: 0
+    #0是左目 1是右目
+
+  #  单目逻辑判断
+    roi_value: 6
+    # roi扩大区域，
+    min_thresh_red: 160
+    # 红色敌方 选择的阈值
+    min_thresh_blue: 160
+    # 蓝色地方选择的阈值
+    # color_thresh: 70
+
+    light_max_area: 6000
+    # 灯条最大面积，可以用来排除非常大的灯条
+    light_min_area: 7
+    # 最小面积，限制分段判断，不宜过小,但是噪点太多可以增加
+
+    light_min_ratio: 0.9
+    light_max_ratio: 15
+    # 灯条的长宽比，可以有效限制灯条的筛选，但值过小容易出错
+    light_min_angle: 60.0
+    light_max_angle: 120.0
+    # 灯条的角度范围，其中90为最正的情况，可以用来筛选过于歪斜
+    light_area_ratio: 0.45
+    # 轮廓面积与最大外界矩形的面积比，可以筛选圆形灯条什么的，但是噪点太多的时候，该条件用处不太大
+
+    armor_small_width: 0.135
+    armor_small_height: 0.053
+    armor_large_width: 0.230
+    armor_large_height: 0.053
+    # 单目测距时候用的故有装甲版参数，不要动
+
+    armor_tiltangle: 45
+    # 装甲板旋转角，筛掉过于倾斜的装甲板,单位是度
+    armor_ratio_max: 6.5
+    armor_ratio_min: 0.5
+    # 装甲板的长宽比，因为有大装甲板，一般不会改太小
+    armor_malposition: 5 
+    # 装甲板宽度
+    lights_diff_max: 2
+    # 装甲板两根灯条的比值
+    armor_min_area: 15
+    # 数字识别区域的最小面积，筛掉无法数字识别的区域
+    max_single_distance: 1000
+    # 单目极限距离，超过这一距离的单目测距精度有问题
+    angle_diff: 20
+    RBdiff: 30
+    BRdiff: 30     
+    
+    # 双目逻辑判断用
+    max_armor_ratio_rate: 1.3
+    max_armor_distance_rate: 1.3
+    # 两个目标装甲板的角度和距离比率，建议在1.2-1.7之间
+    max_diff_distance: 5.4 
+    min_diff_distance: 0.05
+    # 容易出bug的地方，一个位置关系的比例，建议设置在1-4之间，如果出现了单目有双目无的情况，可以扩大范围，但是最小必须大于0
+    
+dimDetect:
+  #  单目逻辑判断
+    roi_value: 2
+    # roi扩大区域，
+    min_thresh_red: 60
+    # 红色敌方 选择的阈值
+    min_thresh_blue: 75
+    # 蓝色地方选择的阈值
+
+    light_max_area: 6000
+    # 灯条最大面积，可以用来排除非常大的灯条
+    light_min_area: 25
+    # 最小面积，限制了最远距离，不宜过小,但是噪点太多可以增加
+
+    light_min_ratio: 1.2
+    light_max_ratio: 6
+    # 灯条的长宽比，可以有效限制灯条的筛选，但值过小容易出错
+    light_min_angle: 65.0
+    light_max_angle: 115.0
+    # 灯条的角度范围，其中90为最正的情况，可以用来筛选过于歪斜
+    light_area_ratio: 0.65
+    # 轮廓面积与最大外界矩形的面积比，可以筛选圆形灯条什么的，但是噪点太多的时候，该条件用处不太大
+        
+    angle_diff: 15
+    armor_tiltangle: 20
+    # 装甲板旋转角，筛掉过于倾斜的装甲板,单位是度
+    armor_ratio_max: 6
+    armor_ratio_min: 1.5
+    # 装甲板的长宽比，因为有大装甲板，一般不会改太小
+    armor_malposition: 7 
+    # 装甲板宽度
+    lights_diff_max: 2
+    # 装甲板两根灯条的比值
+    RBdiff: 55
+    BRdiff: 45

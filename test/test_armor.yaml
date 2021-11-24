@@ -1,0 +1,16 @@
+%YAML:1.0
+---
+
+
+
+
+Test_Armor: 
+   video_path: /home/dino/liangRH/WMJ2021/build/video/
+   video_path_left: /home/wsn/Work/video/num_4/left11.avi
+   video_path_right: /home/wsn/Work/video/num_4/right11.avi
+   waitKey_time: 1
+ 
+
+State: 
+   number_save : 1
+

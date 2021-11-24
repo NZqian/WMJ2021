@@ -1,0 +1,12 @@
+%YAML:1.0
+---
+debug: 0
+
+SerialPort:
+    write: /dev/ttyUSB1
+    read:  /dev/ttyUSB0
+    baud_write: 460800
+    baud_read: 460800
+
+CanPort:
+    port: can0

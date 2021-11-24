@@ -1,0 +1,8 @@
+%YAML:1.0
+---
+
+port_type: 1 # 0 serial; 1 can
+
+fifteen_shoot_speed  : 13.7
+eighteen_shoot_speed : 16.0
+thirty_shoot_speed   : 27.5

@@ -1,0 +1,21 @@
+%YAML:1.0
+---
+Rune:
+  color: 0                      # 0:蓝色 1:红色
+  debug: 0                      # debug标志位
+  index: "left"                 # 显示左右目图像
+
+  threshold_gray_red: 30        # 亮度二值图的阈值,对应binary图片
+  threshold_color_red: 80       # 颜色二值图的阈值,对应color图片
+  threshold_gray_blue: 30
+  threshold_color_blue: 80
+
+  small_contour_area_max: 2000  # 装甲板的最大面积
+  small_contour_area_min: 20    # 装甲板的最小面积
+  big_contour_area_max: 8000    # 扇叶的最大面积
+  big_contour_area_min: 10      # 扇叶的最小面积
+  center_area_max: 1000         # 中心R的最大面积
+  center_area_min: 80           # 中心R的最小面积
+
+  auto_shoot: 0                 # 自动击发标志位
+  pitch_off: 0.0                # 弹道补偿

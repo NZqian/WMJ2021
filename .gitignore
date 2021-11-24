@@ -1,7 +1,6 @@
 build
 *.mp4
 *.avi
-*.yaml
 .vscode
 *.swp
 .nvimlog

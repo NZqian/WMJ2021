@@ -1,0 +1,29 @@
+%YAML:1.0
+---
+
+motion:
+  debug                   : 0
+  init_count_threshold    : 300
+  predict_coe             : 5.1 #0.34
+  control_freq            : 18.0
+  target_change_threshold : 0.25
+
+pose:
+  debug : 0
+  freq  : 40.2
+  init_count_max: 200
+  Q_x: 0.0001
+  Q_y: 0.0001
+  Q_z: 0.0001
+  R_x: 1
+  R_y: 1
+  R_z: 1
+  gain_x: 0.35
+  gain_y: 0.35
+  gain_z: 0.35
+
+KF:
+  debug                : 0
+  init_count_threshold : 100
+  predict_coe          : 0.0
+  control_freq         : 18.0

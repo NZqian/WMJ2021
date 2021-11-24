@@ -1,0 +1,28 @@
+%YAML:1.0
+---
+debug           : 0
+error_threshold : 0.0
+
+#first
+yaw_kp           : 35
+yaw_ki           : 0
+yaw_kd           : 28
+pit_kp           : 6.0
+pit_ki           : 0.0
+pit_kd           : 25.0
+
+
+#yaw_kp           : 12
+#yaw_ki           : 0
+#yaw_kd           : 20
+#pit_kp           : 15.0
+#pit_ki           : 0.0
+#pit_kd           : 30.0
+
+# second
+yaw_kp2          : 20.0
+yaw_ki2          : 0.009
+yaw_kd2          : 35.0
+pit_kp2          : 0.0
+pit_ki2          : 0.0
+pit_kd2          : 0.0

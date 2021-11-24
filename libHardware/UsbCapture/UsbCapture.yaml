@@ -1,0 +1,67 @@
+%YAML:1.0
+---
+
+camera0: camera0
+camera1: camera1
+
+# 相机序列号，每个相机不同，要做一定的修改
+left_cam_serial_num  : KE0200070448
+right_cam_serial_num : KE0200070450
+
+armor:
+    # 曝光
+    exposure_mode : 0 # 0 MANUAL; 1 AUTO
+    exposure      : 3000
+
+    # 增益
+    gain: 10.0
+
+    # 白平衡
+    auto_wb  : 0 # 0 手动; 1 自动白平衡
+    wb_red   : 1.6484
+    wb_green : 1.000
+    wb_blue  : 1.5664
+
+calib:
+    # 曝光
+    exposure_mode : 0 # 0 MANUAL; 1 AUTO
+    exposure      : 8000
+
+    # 增益
+    gain: 10.0
+
+    # 白平衡
+    auto_wb  : 0 # 0 手动; 1 自动白平衡
+    wb_red   : 1.6484
+    wb_green : 1.000
+    wb_blue  : 1.5664
+
+dart:
+    # 曝光
+    exposure_mode : 0 # 0 MANUAL; 1 AUTO
+    exposure      : 800
+
+    # 增益
+    gain: 0.0
+
+    # 白平衡
+    auto_wb  : 0 # 0 手动; 1 自动白平衡
+    wb_red   : 1.7305
+    wb_green : 1.000
+    wb_blue  : 1.5898
+
+
+rune:
+    # 曝光
+    exposure_mode : 0 # 0 MANUAL; 1 AUTO
+    exposure      : 800
+
+    # 增益
+    gain: 10.0
+
+    # 白平衡
+    auto_wb  : 0 # 0 手动; 1 自动白平衡
+    wb_red   : 1.6484
+    wb_green : 1.000
+    wb_blue  : 1.5664
+
